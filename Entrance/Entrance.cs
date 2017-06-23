@@ -1,10 +1,9 @@
 ﻿
-
+using UnityEngine;
 public class Entrance
 {
     public static void Main()
     {
-        int a = 0;
-        int b = a;
+        Debug.LogError("I am comming");
     }
 }
