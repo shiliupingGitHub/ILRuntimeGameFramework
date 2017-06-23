@@ -1,0 +1,17 @@
+E:\ILRuntimeGameFramework\GameLogic\obj\Debug\GameLogic.csprojResolveAssemblyReference.cache
+E:\ILRuntimeGameFramework\GameLogic\obj\Debug\GameLogic.dll
+E:\ILRuntimeGameFramework\GameLogic\obj\Debug\GameLogic.pdb
+E:\ILRuntimeGameFramework\GameLogic\bin\GameLogic.dll
+E:\ILRuntimeGameFramework\GameLogic\bin\GameLogic.pdb
+E:\ILRuntimeGameFramework\GameLogic\bin\Assembly-CSharp.dll
+E:\ILRuntimeGameFramework\GameLogic\bin\Mono.Cecil.dll
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEngine.dll
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEngine.Networking.dll
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEngine.UI.dll
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEditor.dll
+E:\ILRuntimeGameFramework\GameLogic\bin\Assembly-CSharp.pdb
+E:\ILRuntimeGameFramework\GameLogic\bin\Mono.Cecil.xml
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEngine.xml
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEngine.Networking.xml
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEngine.UI.xml
+E:\ILRuntimeGameFramework\GameLogic\bin\UnityEditor.xml
