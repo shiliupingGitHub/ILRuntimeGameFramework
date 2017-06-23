@@ -11,19 +11,45 @@ public class main : MonoBehaviour {
         ILRuntime,
     }
     public RunType mRunType = RunType.ILRuntime;
+    public static  GameScriptFactory mScriptFactory = null;
+    public static  ResourceManager mResMgr = null;
 	void Start () {
-	    switch(mRunType)
+        InitBaseRunTime();
+        switch (mRunType)
         {
             case RunType.MONO:
                 RunAsMono();
                 break;
+            case RunType.ILRuntime:
+                RunAsIL();
+                break;
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void InitBaseRunTime()
+    {
+        if (null != mScriptFactory)
+            mScriptFactory.Clear();
+        if (null != mResMgr)
+            mResMgr.Clear();
+        mScriptFactory = new GameScriptFactory();
+        mResMgr = new ResourceManager();
+    }
+	void RunAsIL()
+    {
+       UnityEngine.Object o = mResMgr.LoadRes("Logic/Entrance");
+        TextAsset ta = o as TextAsset;
+        ILRuntime.Runtime.Enviorment.AppDomain appdomain = new ILRuntime.Runtime.Enviorment.AppDomain();
+        using (System.IO.MemoryStream fs = new System.IO.MemoryStream(ta.bytes))
+        {      
+             appdomain.LoadAssembly(fs, null, new Mono.Cecil.Pdb.PdbReaderProvider());            
+        }
+        InitILRuntime(appdomain);
+        appdomain.Invoke("Entrance", "Main", null);
+    }
+    void InitILRuntime(ILRuntime.Runtime.Enviorment.AppDomain appdomain)
+    {
+        appdomain.RegisterCrossBindingAdaptor(new GameScriptInterfaceAdapter());
+    }
     void RunAsMono()
     {
         CallMethod("Entrance", "Main");
