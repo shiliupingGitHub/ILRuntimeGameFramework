@@ -64,14 +64,18 @@
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="GameLogic">
-      <HintPath>Assets\Game\Resources\Logic\GameLogic.dll</HintPath>
-    </Reference>
     <Reference Include="Entrance">
-      <HintPath>Assets\Game\Resources\Logic\Entrance.dll</HintPath>
+      <HintPath>Assets\Game\Scripts\Entrance.dll</HintPath>
+    </Reference>
+    <Reference Include="GameLogic">
+      <HintPath>Assets\Game\Scripts\GameLogic.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Game\Scripts\GameMonobehaviour.cs" />
+    <Compile Include="Assets\Game\Scripts\GameScriptFactory.cs" />
+    <Compile Include="Assets\Game\Scripts\GameScriptInterfaceAdapter.cs" />
+    <Compile Include="Assets\Game\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Game\Scripts\main.cs" />
     <Compile Include="Assets\ILRuntime\CLR\Method\CLRMethod.cs" />
     <Compile Include="Assets\ILRuntime\CLR\Method\ExceptionHandler.cs" />
